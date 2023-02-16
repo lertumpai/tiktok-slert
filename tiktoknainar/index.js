@@ -14,6 +14,7 @@ const cutVideo = async (sourcePath, outputPath, startTime, duration) => {
     ffmpeg(sourcePath)
       .setFfmpegPath(pathToFfmpeg)
       .setFfprobePath(ffprobe.path)
+      .withNoAudio()
       .output(outputPath)
       .setStartTime(startTime)
       .setDuration(duration)
