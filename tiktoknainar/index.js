@@ -22,7 +22,7 @@ const cutVideo = async (sourcePath, outputPath, startTime, duration) => {
         filter: "crop",
         options: {
           w: dimension.width,
-          h: dimension.height - 140,
+          h: dimension.height - 145, // 140+
         }
       }])
       .on('end', function (err) {
